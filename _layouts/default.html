@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>{{ site.name }}</title>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/css/normalize.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/css/foundation.min.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/js/vendor/custom.modernizr.min.js"></script>
+
+</head>
+<body>
+
+  <!-- Nav Bar -->
+
+  <div class="row">
+    <div class="large-12 columns">
+      <nav class="top-bar">
+        <ul class="title-area">
+           <!-- Title Area -->
+          <li class="name">
+            <h1>
+              <a href="/">
+                {{ site.name }}
+              </a>
+            </h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <ul class="left">
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Another Page</a></li>
+	  </ul>
+
+	  <!--
+          <ul class="right">
+            <li class="search">
+              <form>
+                <input type="search">
+              </form>
+            </li>
+
+            <li class="has-button">
+              <a class="small button" href="#">Search</a>
+            </li>
+          </ul>
+	  -->
+        </section>
+      </nav>
+      
+    </div>
+  </div>
+
+  <!-- End Nav -->
+
+
+  <!-- Main Page Content and Sidebar -->
+
+  <div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns" role="content">
+      {{ content }}
+    </div>
+
+    <!-- End Main Content -->
+
+
+    <!-- Sidebar -->
+
+    <aside class="large-3 columns">
+      <h5>Categories</h5>
+      <ul class="side-nav">
+
+	{% for category in site.categories %}
+	<li>{{ category.name }} </li>
+	{% endfor %}
+        <li><a href="#">News</a></li>
+        <li><a href="#">Code</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Fun</a></li>
+        <li><a href="#">Weasels</a></li>
+      </ul>
+    </aside>
+
+    <!-- End Sidebar -->
+  </div>
+
+  <!-- End Main Content and Sidebar -->
+
+
+  <!-- Footer -->
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr />
+      <div class="row">
+        <div class="large-6 columns">
+          <p>&copy; Mukund Krishnamurthy</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/js/vendor/zepto.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+
+  <!-- End Footer -->
+</body>
+</html>

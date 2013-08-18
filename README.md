@@ -1,4 +1,6 @@
 my-jekyll-blog
 ==============
 
-Template for my jekyll blog generator
+Just my Jekyll site generater customizations.
+
+

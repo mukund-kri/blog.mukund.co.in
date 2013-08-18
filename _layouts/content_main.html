@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="large-9 columns" role="content">
+  {{ content }}
+</div>
+<aside class="large-3 columns">
+  <h5>Categories</h5>
+  <ul class="side-nav">
+    {% for category in site.categories %}
+    <li>{{ category[0]|category_linkify }} </li>
+    {% endfor %}
+  </ul>
+</aside> 

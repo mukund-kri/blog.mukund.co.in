@@ -3,14 +3,15 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
+  {% gen_meta %}
 
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
   <title>{% if page.title %} {{ page.title }} | {% endif %} {{ site.name }}</title>
 
-  <link rel="stylesheet" href="/css/syntax.css" />
-  <link rel="stylesheet" href="/css/app.css" />
+  <link rel="stylesheet" href="/css/syntax.css{% cache_buster %}" />
+  <link rel="stylesheet" href="/css/app.css{% cache_buster %}" />
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/js/vendor/custom.modernizr.min.js"></script>
 

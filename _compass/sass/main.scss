@@ -1,0 +1,60 @@
+/* my first scss page */
+	
+@mixin post-title {
+  h2.title {
+    margin-bottom: 0em;
+  }
+  p.date {
+    font-style: italic;
+    font-size: 12px;
+  }
+} 
+#listing article {
+  margin-bottom: 40px;
+  @include post-title;
+}
+
+#post {
+  @include post-title; 
+}
+
+#content {
+  border-right: 1px dotted #9dafb2;
+  padding-right: 20px;
+}
+
+$title-bar-height: 86px;
+$title-bar-radius: 15px;
+
+#title-bar {
+  background-color: black;
+  height: $title-bar-height;
+  padding: 12px 20px 0px 20px;
+  margin-bottom: 30px;
+
+  -webkit-border-radius: 0px 0px $title-bar-radius $title-bar-radius;
+  -moz-border-radius: 0px 0px $title-bar-radius $title-bar-radius;
+  border-radius: 0px 0px $title-bar-radius $title-bar-radius;
+
+  a {
+    color: white;
+  }
+
+  #name {
+    font-size: 25px;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid white;
+  }
+
+  ul {
+    padding-top: 5px;
+    margin-left: 0px;
+  }
+  li {
+     list-style-type: none;
+     display: inline;
+     font-size: 17px;
+     padding: 0px 20px 0px 0px;
+     color: white;
+  }
+}

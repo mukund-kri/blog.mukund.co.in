@@ -12,36 +12,26 @@
 
   <link rel="stylesheet" href="/css/syntax.css{% cache_buster %}" />
   <link rel="stylesheet" href="/css/app.css{% cache_buster %}" />
+  <link rel="stylesheet" href="/css/main.css{% cache_buster %}" />
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/js/vendor/custom.modernizr.min.js"></script>
 
 </head>
 <body>
 
-  <!-- Nav Bar -->
   <div class="row">
     <div class="large-12 columns">
-      <nav class="top-bar" id="top-bar">
-        <ul class="title-area">
-          <!-- Title Area -->
-          <li class="name">
-            <h1>
-              <a href="/">
-                {{ site.name }}
-              </a>
-            </h1>
-          </li>
-        </ul>
-	
-        <section class="top-bar-section">
-          <ul class="left">
-            <li><a href="/about_me.html">About Me</a></li>
-	  </ul>
-        </section>
+      <nav id="title-bar">
+	<div id="name">
+	  <a href="/">{{ site.name }}</a>
+	</div>
+	<ul>
+	  <li><a href="/">Blog</a></li>
+	  <li><a href="/about_me.html">About Me</a></li>
+	</ul>
       </nav>
     </div>
   </div>
-  <!-- End Nav -->
   
   <!-- Main Page Content and Sidebar -->
   <div class="row">

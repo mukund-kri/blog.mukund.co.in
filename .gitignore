@@ -5,4 +5,5 @@ _posts/
 .#*
 *sass-cache*
 .project
+s3_website.yml
 

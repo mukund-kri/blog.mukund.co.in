@@ -1,0 +1,26 @@
+---
+layout: default
+title: Archi ve by year and month
+---
+
+<div class="large-12 columns" role="content">
+  <div id="home">
+    <h2>Archives</h2>
+    {% for year in page.by_year %}
+    <section class="yearly-posts">
+      <h2>{{ year[0] }} </h2>
+      
+      {% for month in year[1] %}
+      <section class="monthly-posts">
+	<h3>{{ month[0]|to_month }}</h3>
+	<ol>
+	  {% for post in month[1] %}
+	  <li><a href="{{post.url}}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ol>
+      </section>
+      {% endfor %}
+    </section>
+    {% endfor %}
+  </div>
+</div>

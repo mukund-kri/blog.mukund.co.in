@@ -28,6 +28,8 @@ module Jekyll
       site.pages << CategoryPage.new(site, site.source, ".", site.categories)
     end
   end
+
+  
   
 end
 

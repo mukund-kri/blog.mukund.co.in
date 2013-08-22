@@ -63,10 +63,27 @@ div .highlight {
   margin: 25px 0px 22px 0px;    
 }
 
+
+$section-margin: 20px;
+@mixin post-listing {
+  ol {
+    padding-left: 20px;
+  }
+}
+
 .yearly-posts  {
-  margin-left: 20px;
+  margin-left: $section-margin;
   
   .monthly-posts {
-     margin-left: 20px;	
+     margin-left: $section-margin;  	
   }
+  @include post-listing;
+}
+
+.category {
+  padding-right: 10px;
+}
+.category-pages {
+  padding-left: $section-margin;
+  @include post-listing;
 }

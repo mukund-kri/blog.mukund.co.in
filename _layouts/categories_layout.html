@@ -9,18 +9,20 @@ layout: default
     <span class="category"><a href="#{{category[0]}}">{{category[0]}}</a></span>
     {% endfor %}
     </p>
-    
-    <h2>Posts by category</h2>
-    {% for category in site.categories %}
-    <p>
-    <a name="{{category[0]}}"></a>
-    <h3>{{ category[0] }}</h3>
-    <ul>
-      {% for post in category[1] %}
-      <li><a href="{{post.url}}">{{ post.title }}</a></li>
+
+    <div id="category-listing">
+      <h2>Posts by category</h2>
+      {% for category in site.categories %}
+      <div class="category-pages">
+	<a name="{{category[0]}}"></a>
+	<h3>{{ category[0] }}</h3>
+	<ol>
+	  {% for post in category[1] %}
+	  <li><a href="{{post.url}}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ol>
+      </div>
       {% endfor %}
-    </ul>
-    </p>
-    {% endfor %}
+    </div>
   </div>
 </div>

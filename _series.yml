@@ -1,0 +1,7 @@
+pyramid:
+  description: 
+    In this series I explore Pyramid 1.4 while building a medium sized web application. I use 
+    mongodb for persistance and Foundation 4 for css.
+
+
+

@@ -212,8 +212,8 @@ $paragraph-margin-bottom: emCalc(10);
 // Style anchors
 
 // $anchor-text-decoration: none;
-// $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: darken($primary-color, 5%);
+$anchor-font-color: $header-font-color;
+$anchor-font-color-hover: darken($header-font-color, 5%);
 
 // Style the <hr> element
 

@@ -11,4 +11,12 @@ layout: default
     <li>{{ category[0]|category_linkify }} </li>
     {% endfor %}
   </ul>
+
+  <h3>Series</h3>
+  
+  <ul class="side-nav">
+    {% for series in site.series %}
+    <li>{{series}}</li>
+    {% endfor %}
+  </ul>
 </aside> 

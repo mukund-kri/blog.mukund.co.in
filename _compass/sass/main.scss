@@ -18,8 +18,10 @@
   @include post-title; 
 }
 
+$borders-dotted: 1px dotted #9dafb2;
+
 #content {
-  border-right: 1px dotted #9dafb2;
+  border-right: $borders-dotted;
   padding-right: 20px;
 }
 
@@ -87,3 +89,14 @@ $section-margin: 20px;
   padding-left: $section-margin;
   @include post-listing;
 }
+
+#series-nav {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: $borders-dotted;
+  
+  #series-next {
+    text-align: right;
+  }
+}
+

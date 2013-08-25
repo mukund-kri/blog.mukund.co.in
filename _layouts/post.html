@@ -7,3 +7,18 @@ layout: content_main
 
 {{ content }}
 </section>
+
+{% if page.left or page.right %}
+<section id="series-nav">
+  <div class="large-6 columns" id="series-prev">
+    {% if page.left %}
+    <a href="{{ page.left.url }}"><< Previous: {{ page.left.title }}</a>
+    {% endif %}
+  </div>
+  <div class="large-6 columns" id="series-next">
+    {% if page.right %}
+    <a href="{{ page.right.url }}">Next: {{ page.right.title }} >></a>
+    {% endif %}
+  </div>
+</section>
+{% endif %}

@@ -1,6 +1,6 @@
 name: Mukund's Blog 
 markdown: redcarpet
-pygments: true
+highliter: pygments
 
 # My configurations
 
@@ -18,3 +18,10 @@ Social:
       font: arial
       faces: false
       width: 90
+
+sass:
+  sass_dir: _sass
+
+
+
+ 

@@ -1,0 +1,3 @@
+[submodule "content"]
+	path = content
+	url = git@mybb:mukund_kri/blog_content.git

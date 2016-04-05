@@ -1,4 +1,6 @@
-name: Mukund's Blog 
+name: Mukund's Blog
+title: Mukund's coding notes
+
 markdown: redcarpet
 highliter: pygments
 
@@ -22,6 +24,5 @@ Social:
 sass:
   sass_dir: _sass
 
-
-
- 
+gems:
+  - jekyll-gist

@@ -1,105 +1,53 @@
 ---
+# Only the main Sass file needs front matter (the dashes are enough)
 ---
-/* my first scss page */
-	
-@mixin post-title {
-  h2.title {
-    margin-bottom: 0em;
-  }
-  p.date {
-    font-style: italic;
-    font-size: 12px;
-  }
-} 
-#listing article {
-  margin-bottom: 40px;
-  @include post-title;
-}
+@charset "utf-8";
 
-#post {
-  @include post-title; 
-}
 
-$borders-dotted: 1px dotted #9dafb2;
 
-#content {
-  border-right: $borders-dotted;
-  padding-right: 20px;
-}
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
 
-$title-bar-height: 86px;
-$title-bar-radius: 15px;
+$spacing-unit:     30px;
 
-#title-bar {
-  background-color: black;
-  height: $title-bar-height;
-  padding: 12px 20px 0px 20px;
-  margin-bottom: 30px;
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
 
-  -webkit-border-radius: 0px 0px $title-bar-radius $title-bar-radius;
-  -moz-border-radius: 0px 0px $title-bar-radius $title-bar-radius;
-  border-radius: 0px 0px $title-bar-radius $title-bar-radius;
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
 
-  a {
-    color: white;
-  }
+// Width of the content area
+$content-width:    1200px;
 
-  #name {
-    font-size: 25px;
-    padding: 0px 0px 10px 0px;
-    border-bottom: 1px solid white;
-  }
+$on-laptop:        1200;
+$on-palm:          1200;
 
-  ul {
-    padding-top: 5px;
-    margin-left: 0px;
-  }
-  li {
-     list-style-type: none;
-     display: inline;
-     font-size: 17px;
-     padding: 0px 20px 0px 0px;
-     color: white;
-  }
-}
 
-div .highlight {
-  margin: 25px 0px 22px 0px;    
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
 }
 
 
-$section-margin: 20px;
-@mixin post-listing {
-  ol {
-    padding-left: 20px;
-  }
-}
 
-.yearly-posts  {
-  margin-left: $section-margin;
-  
-  .monthly-posts {
-     margin-left: $section-margin;  	
-  }
-  @include post-listing;
-}
-
-.category {
-  padding-right: 10px;
-}
-.category-pages {
-  padding-left: $section-margin;
-  @include post-listing;
-}
-
-#series-nav {
-  margin-top: 50px;
-  padding-top: 20px;
-  border-top: $borders-dotted;
-  
-  #series-next {
-    text-align: right;
-  }
-}
-
-
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;

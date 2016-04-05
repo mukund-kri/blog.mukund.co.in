@@ -1,24 +1,15 @@
 ---
-layout: content_main
+layout: default
 ---
-<section id="post">
-<h2 class="title">{{ page.title }}</h2>
-<p class="date">{{ page.date | date_to_string }}</p>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-{{ content }}
-</section>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  </header>
 
-{% if page.left or page.right %}
-<section id="series-nav">
-  <div class="large-6 columns" id="series-prev">
-    {% if page.left %}
-    <a href="{{ page.left.url }}"><< Previous: {{ page.left.title }}</a>
-    {% endif %}
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
   </div>
-  <div class="large-6 columns" id="series-next">
-    {% if page.right %}
-    <a href="{{ page.right.url }}">Next: {{ page.right.title }} >></a>
-    {% endif %}
-  </div>
-</section>
-{% endif %}
+
+</article>

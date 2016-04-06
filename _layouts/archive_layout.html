@@ -5,16 +5,11 @@ title: Archive by year and month
 
 <div class="large-12 columns" role="content">
   <div id="home">
-    <dl class="sub-nav">
-      <dt>View By :: </dt>
-      <dd class="active"><a href="/archives.html">By Date</a></dd>
-      <dd><a href="/series.html">By Series</a></dd>
-    </dl>
     <h2>Archives</h2>
     {% for year in page.by_year %}
     <section class="yearly-posts">
       <h2>{{ year[0] }} </h2>
-      
+
       {% for month in year[1] %}
       <section class="monthly-posts">
 	<h3>{{ month[0]|to_month }}</h3>

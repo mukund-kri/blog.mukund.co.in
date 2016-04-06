@@ -1,0 +1,16 @@
+@import "gridle/gridle";
+
+@include gridle_setup( (
+    context : 12,
+    gutter-width : 20px,
+    direction : ltr
+) );
+
+// generate classes :
+@include gridle_generate_classes ( );
+
+// manage container width :
+.container {
+    max-width : 960px;
+    margin : 0 auto;
+};

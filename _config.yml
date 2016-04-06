@@ -26,7 +26,3 @@ sass:
 
 gems:
   - jekyll-gist
-
-
-collections:
-  - archives

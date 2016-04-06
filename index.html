@@ -5,7 +5,15 @@ title:
 
 <div id="listing">
   {% for post in site.posts limit:5 %}
-  {{ collections }}
+    <article>
+      <div class="gr-1">{{post.date | date_to_string }}</div>
+
+        <div class="gr-11">
+        <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+        <p>{{ post.excerpt }}</p>
+      </div>
+    </article>
   {% endfor %}
 </div>
 

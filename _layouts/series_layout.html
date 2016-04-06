@@ -3,18 +3,6 @@ layout: default
 ---
 <div class="large-12 columns" role="content">
   <div id="home">
-    <dl class="sub-nav">
-      <dt>View By :: </dt>
-      <dd><a href="/archives.html">By Date</a></dd>
-      <dd class="active"><a href="#">By Series</a></dd>
-    </dl>    
-    
-    <h2>Series</h2>
-    <p>
-      {% for series in page["series_list"] %}
-      <span class="category"><a href="#{{ series[0] }}">{{ series[0] }}</a></span>
-      {% endfor %}
-    </p>
 
     <div id="category-listing">
       <h2>Posts by series</h2>

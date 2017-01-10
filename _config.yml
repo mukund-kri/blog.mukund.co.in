@@ -1,7 +1,7 @@
 name: Mukund's Blog
 title: Mukund's coding notes
 
-markdown: redcarpet
+markdown: kramdown
 highliter: pygments
 
 # My configurations
